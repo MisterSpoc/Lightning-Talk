@@ -43,7 +43,7 @@ def returns(num):
         case 5:
             return (1,2,3,4)
     
-def multipleInputs(number, str = 'Hello World'):
+def multipleInputs(number, string = 'Hello World'):
     """Returns input values.
     Use to demonstrate flags and multiple inputs in fire
 
@@ -52,7 +52,7 @@ def multipleInputs(number, str = 'Hello World'):
         str (str, optional): any input. Defaults to 'Hello World'.
     """
     print(number)
-    print(str)
+    print(string)
     return
 
 def args(*args):
