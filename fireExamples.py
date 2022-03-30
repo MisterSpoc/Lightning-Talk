@@ -27,7 +27,7 @@ def returns(num):
         num (int): an integer in range(0,6)
 
     Returns:
-        _type_: _description_
+        Any: one of a data type
     """
     match num:
         case 0:
