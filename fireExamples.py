@@ -1,15 +1,34 @@
 import fire
 
 def helloWorld(text):
+    """Prints "Hello <input text>"
+
+    Args:
+        text (str): a text string
+    """
     print("Hello {}".format(text))
     return
     
 def dataTypes(inp):
+    """Prints the input value and its data type to the console
+
+    Args:
+        inp (Any): Any single input
+    """
     print(inp)
     print(type(inp))
     return
     
 def returns(num):
+    """Returns various data types depending on input integer.
+    Use to demonstrate how fire handles different data types in return statements
+
+    Args:
+        num (int): an integer in range(0,6)
+
+    Returns:
+        _type_: _description_
+    """
     match num:
         case 0:
             return "String"
@@ -25,17 +44,36 @@ def returns(num):
             return (1,2,3,4)
     
 def multipleInputs(number, str = 'Hello World'):
+    """Returns input values.
+    Use to demonstrate flags and multiple inputs in fire
+
+    Args:
+        number (int): any input.
+        str (str, optional): any input. Defaults to 'Hello World'.
+    """
     print(number)
     print(str)
     return
 
 def args(*args):
+    """Returns input
+
+    Returns:
+        tuple: returns tuple of input values
+    """
     return args
 
 def kwargs(**kwargs):
+    """Returns input
+
+    Returns:
+        dict: returns dictionary of input values
+    """
     return kwargs
 
 class Obj():
+    """Example object to demonstrate calling objects in fire
+    """
     def __init__(self):
         self.num1 = 2
         self.num2 = 5
@@ -45,15 +83,34 @@ class Obj():
         return 'num1: {}\nnum2: {}\nlist: {}'.format(self.num1, self.num2, self.list)
     
     def setNums(self, x, y):
+        """Use to set num1 and num2 Obj values
+
+        Args:
+            x (int,float): any number
+            y (int,float): any number
+
+        Returns:
+            Obj: self
+        """
         self.num1 = x
         self.num2 = y
         return self
     
     def setList(self, *args):
+        """Use to set list Obj value
+
+        Returns:
+            Obj: self
+        """
         self.list = list(args)
         return self
     
     def square(self):
+        """Squares num1 and num2 and updates their values
+
+        Returns:
+            Obj: self
+        """
         self.num1 = self.num1**2
         self.num2 = self.num2**2
         return self
