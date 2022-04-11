@@ -117,3 +117,8 @@ class Obj():
 
 if __name__ == '__main__':
     fire.Fire()
+    # fire.Fire(helloWorld)
+    # fire.Fire({
+    #     'data':dataTypes,
+    #     'return':returns
+    #            })
