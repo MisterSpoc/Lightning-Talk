@@ -33,13 +33,13 @@ def returns(num):
         case 0:
             return "String"
         case 1:
-            return 1
+            return 1.5
         case 2:
-            return 3.14
-        case 3:
             return [0,1,2,3]
+        case 3:
+            return [[0,1,2,3],[1,2,3],['apple', 'orange', 8, 2]]
         case 4:
-            return {'apple':2, 'orange':9.2, 'banana':-3}
+            return {'apple':2, 'orange':9.2, 'banana':5}
         case 5:
             return (1,2,3,4)
     
@@ -74,9 +74,9 @@ def kwargs(**kwargs):
 class Obj():
     """*Example object to demonstrate calling objects in fire
     """
-    def __init__(self):
-        self.num1 = 2
-        self.num2 = 5
+    def __init__(self, num1=2, num2=5):
+        self.num1 = num1
+        self.num2 = num2
         self.list = ["Apple", "Orange", "Banana"]
     
     def __str__(self):
@@ -114,6 +114,17 @@ class Obj():
         self.num1 = self.num1**2
         self.num2 = self.num2**2
         return self
+    
+    def half(self):
+        """Halves num1 and num2 and updates their values
+
+        Returns:
+            Obj: self
+        """
+        self.num1 = self.num1/2
+        self.num2 = self.num2/2
+        return self
+    
 
 if __name__ == '__main__':
     fire.Fire()
