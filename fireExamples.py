@@ -44,7 +44,7 @@ def returns(num):
             return (1,2,3,4)
     
 def multipleInputs(number, string = 'Hello World'):
-    """Returns input values.
+    """*Returns input values.
     Use to demonstrate flags and multiple inputs in fire
 
     Args:
@@ -56,7 +56,7 @@ def multipleInputs(number, string = 'Hello World'):
     return
 
 def args(*args):
-    """Returns input
+    """*Returns input
 
     Returns:
         tuple: returns tuple of input values
@@ -72,7 +72,7 @@ def kwargs(**kwargs):
     return kwargs
 
 class Obj():
-    """Example object to demonstrate calling objects in fire
+    """*Example object to demonstrate calling objects in fire
     """
     def __init__(self):
         self.num1 = 2
